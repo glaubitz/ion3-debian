@@ -1,0 +1,3 @@
+var/lib/ion3/debian-menu.lua usr/share/ion3/debian-menu.lua
+var/lib/ion3/debian-menu-i18n.lua usr/share/ion3/debian-menu-i18n.lua
+etc/default/ion3 etc/X11/ion3/cfg_debian.lua

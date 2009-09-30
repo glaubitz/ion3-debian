@@ -1,0 +1,37 @@
+Source: ion3
+Section: non-free/x11
+Priority: extra
+Maintainer: Ben Hutchings <ben@decadent.org.uk>
+Standards-Version: 3.8.1
+Build-Depends: debhelper (>= 7), gcc (>> 3), libx11-dev, libxext-dev, libsm-dev, liblua5.1-0-dev, lua5.1, quilt, pkg-config, groff-base, po-debconf
+XS-Autobuild: yes
+
+Package: ion3
+Section: non-free/x11
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, xterm | x-terminal-emulator, x11-utils
+Recommends: xfonts-75dpi | xfonts-75dpi-transcoded | xfonts-100dpi | xfonts-100dpi-transcoded
+Suggests: menu (>= 2.1.9), docker, ion3-doc, ion3-scripts
+Conflicts: particleman
+Provides: x-window-manager, ion3-api-${Ion:ApiVersion}
+Replaces: particleman
+Homepage: http://iki.fi/tuomov/ion/
+Description: tiling tabbed window manager designed for keyboard users
+ Ion divides the screen into tiles and places windows in these tiles
+ by default.  Each tile has a set of tabs for the windows within it.
+ It also allows windows to be made 'floating' and placed freely.  Ion
+ can be controlled through the keyboard alone or together with a mouse.
+ .
+ Ion can be configured and extended using the Lua language.  It also
+ supports extension modules written in C.
+
+Package: ion3-dev
+Section: non-free/devel
+Priority: extra
+Architecture: all
+Depends: ${misc:Depends}, libx11-dev, libsm-dev, lua5.1, gcc (>> 3)
+Conflicts: particleman-dev
+Replaces: particleman-dev
+Description: Ion3 development files
+ This package contains the files necessary for building extension
+ modules to the Ion window manager, version 3.

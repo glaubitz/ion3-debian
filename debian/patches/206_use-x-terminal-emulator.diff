@@ -1,0 +1,30 @@
+--- ion3.orig/etc/cfg_ioncore.lua
++++ ion3/etc/cfg_ioncore.lua
+@@ -143,7 +143,7 @@
+     kpress(META.."F1", "ioncore.exec_on(_, ':man ion3')"),
+ 
+     bdoc("Run a terminal emulator."),
+-    kpress(ALTMETA.."F2", "ioncore.exec_on(_, XTERM or 'xterm')"),
++    kpress(ALTMETA.."F2", "ioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
+     
+     bdoc("Query for command line to execute."),
+     kpress(ALTMETA.."F3", "mod_query.query_exec(_)"),
+@@ -329,7 +329,7 @@
+ -- Main menu
+ defmenu("mainmenu", {
+     menuentry("Run...",         "mod_query.query_exec(_)"),
+-    menuentry("Terminal",       "ioncore.exec_on(_, XTERM or 'xterm')"),
++    menuentry("Terminal",       "ioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
+     menuentry("Lock screen",
+               "ioncore.exec_on(_, ioncore.lookup_script('ion-lock'))"),
+     menuentry("Help",           "mod_query.query_man(_)"),
+--- ion3.orig/utils/ion-runinxterm
++++ ion3/utils/ion-runinxterm
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-test "$XTERMCMD" || XTERMCMD="xterm"
++test "$XTERMCMD" || XTERMCMD="x-terminal-emulator"
+ 
+ title=""
+ wait=""

@@ -1,0 +1,40 @@
+#!/bin/sh
+set -e
+. /usr/share/debconf/confmodule
+
+UPSTREAM_VERSION=
+DEBIAN_VERSION=
+
+if [ -h /etc/X11/ion3/draw.lua ]; then
+    rm -f /etc/X11/ion3/draw.lua
+fi
+
+ln -s look_clean.lua /etc/X11/ion3/draw.lua
+
+update-alternatives --install /usr/bin/ion ion /usr/bin/ion3 29 \
+    --slave /usr/share/man/man1/ion.1.gz ion.1.gz \
+    /usr/share/man/man1/ion3.1.gz
+
+update-alternatives --install \
+    /usr/bin/x-window-manager x-window-manager /usr/bin/ion3 49 \
+    --slave /usr/share/man/man1/x-window-manager.1.gz x-window-manager.1.gz \
+    /usr/share/man/man1/ion3.1.gz
+
+update-alternatives --install \
+    /usr/bin/x-window-manager x-window-manager /usr/bin/pwm3 48 \
+    --slave /usr/share/man/man1/x-window-manager.1.gz x-window-manager.1.gz \
+    /usr/share/man/man1/pwm3.1.gz
+
+# i18n menu method
+inst=/etc/menu-methods/ion3-i18n
+if [ -f $inst ]; then
+    chmod a+x $inst
+fi
+
+# Initialise extra configuration file list if missing
+[ -f /etc/X11/ion3/cfg_debian_ext.lua ] || >/etc/X11/ion3/cfg_debian_ext.lua
+
+#DEBHELPER#
+
+# Remove the old now-renamed generated Debian menu
+rm -f /var/lib/ion3/debian-menus.lua

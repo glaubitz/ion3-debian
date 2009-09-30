@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# i18n menu method
+inst=/etc/menu-methods/ion3-i18n
+if [ "$1" = "remove" ] && [ -f "$inst" ]; then chmod a-x $inst ; fi
+
+#DEBHELPER#

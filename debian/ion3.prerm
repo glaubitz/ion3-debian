@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = remove ] || [ "$1" = deconfigure ]; then
+    update-alternatives --remove x-window-manager /usr/bin/pwm3
+    update-alternatives --remove x-window-manager /usr/bin/ion3
+    update-alternatives --remove ion /usr/bin/ion3
+fi
+
+if [ "$1" = remove ]; then
+    rm -f /var/lib/ion3/debian-menu.lua
+    rm -f /var/lib/ion3/debian-menu-i18n.lua
+fi
+
+#DEBHELPER#

@@ -1,0 +1,327 @@
+This is the Debian-packaged version of Ion3.  It is not part of the
+Debian system itself due to the restrictions on modifications in the
+Ion3 licence (see below).
+
+The package was put together by Per Olofsson <pelle@dsv.su.se>, based
+on the ion package created by Tommi Virtanen <tv@debian.org>.  It uses
+source from:
+
+  http://modeemi.fi/~tuomov/ion/
+
+The author of Ion3 is Tuomo Valkonen <tuomov@iki.fi>.
+
+--
+
+Although this package is non-free, it can legally be auto-built.
+If you are preparing a new version with a licence change that
+does not allow auto-building, remove the XS-Autobuild field from
+the control file and notify <nonfree@release.debian.net>.
+
+---
+
+The following notice applies to the Ion3 code and to the names "Ion",
+"Ion3", etc.:
+
+Copyright (c) Tuomo Valkonen 1999-2009.
+
+Unless otherwise indicated in components taken from elsewhere, this software
+is licensed under the GNU Lesser General Public License, version 2.1 ("LGPL",
+reproduced below), extended and modified with the following terms:
+
+  If the name Ion(tm) or other names that can be associated with the Ion
+  project are used to distribute this software, then:
+
+    - A version that does not significantly differ from one of the
+      copyright holder's releases, must be provided by default.
+
+    - Significantly altered versions may be provided only if the user
+      explicitly requests for those modifications to be applied, and 
+      is prominently notified that the software is no longer considered 
+      the standard version, and is not supported by the copyright holder.
+      The version string displayed by the program must describe these
+      modifications and the "support void" status.
+
+  Versions for which the above conditions are not satisfied, must be
+  renamed so that they can not be associated with the Ion project, their
+  executables must be given names that do not conflict with the copyright
+  holder's version, and neither the copyright holder nor the Ion project
+  may be referred to for support.
+
+  In the text of sections 0-2, 4-12, and 14-16 of the LGPL, "this License" 
+  is to be understood to refer to the LGPL extended with these terms and,
+  where applicable, possible similar terms related to the names of other
+  works forming a whole. Sections 3 and 13 of the LGPL are void. Where
+  contradictory, these additional terms take precedence over the LGPL.
+
+End of terms.
+
+
+Explanations
+
+Trademarks: With the terms above primarily appealing to copyright law,
+should any of the indicated trademarks be found invalid, does not excuse
+you from the conditions imposed by those terms. The use of these names
+in contexts other than redistribution of this software and modifications,
+is outside the scope of the terms above, and governed by applicable
+trademark or other laws. 
+
+  With regard to modules and other extensions to Ion(tm), the permission
+  is hereby granted to use "Ion" as part of the name, provided that it
+  occurs in a form suggesting that the work is supported by neither the
+  copyright holder nor the Ion project: "Foo for Ion" instead of "Ion Foo",
+  etc.
+
+Significant change: Bug fixes are insignificant as additions. Basic changes
+that are needed to install or run the software on a target platform, are 
+insignificant. Additionally, basic/small configuration changes to better 
+integrate the software with the target platform, without obstructing the
+standard behaviour, are insignificant. Everything else is significant, 
+unless expressly declared otherwise by the copyright holder. 
+
+---
+
+The following notice applies to the dock module (mod_dock):
+
+Copyright (c) Tom Payne 2003
+Copyright (c) Per Olofsson 2003
+
+This program is licensed under the terms of the Lesser General Public
+License (LGPL) version 2.1.
+
+---
+
+The following notices apply to the file name completion code
+(ion-completefile, based on editline):
+
+Copyright 1992 Simmule Turner and Rich Salz.  All rights reserved.
+
+This software is not subject to any license of the American Telephone
+and Telegraph Company or of the Regents of the University of California.
+
+Permission is granted to anyone to use this software for any purpose on
+any computer system, and to alter it and redistribute it freely, subject
+to the following restrictions:
+1. The authors are not responsible for the consequences of use of this
+   software, no matter how awful, even if they arise from flaws in it.
+2. The origin of this software must not be misrepresented, either by
+   explicit claim or by omission.  Since few users ever read sources,
+   credits must appear in the documentation.
+3. Altered versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.  Since few users
+   ever read sources, credits must appear in the documentation.
+4. This notice may not be removed or altered.
+
+The version contained here has some modifications by awb@cstr.ed.ac.uk
+(Alan W Black) in order to integrate it with the Edinburgh Speech Tools
+library and Scheme-in-one-defun in particular.
+
+---
+
+The following notice applies to libtu, a library included in Ion3:
+
+Copyright (c) Tuomo Valkonen 1999-2007.
+
+Most of this library may be distributed and modified under either under
+the Clarified Artistic License or the GNU LGPL, version 2.1 or later,
+both reproduced in the file LICENSE. The red-black tree code is under
+the GNU LGPL; see README.rb for details.
+
+---
+
+The following notice applies to the red-black tree code in libtu:
+
+Copyright (C) 2000 James S. Plank
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+---
+
+Ion3 includes an implementation of snprintf which is licensed under
+the "Frontier Artistic License Version 1.0".  This code is not
+included in the Debian binary packages.  In the source package, the
+license text can be found in libtu/snprintf_2.2/LICENSE.txt.
+
+---
+
+Ion3 includes fontset handling code based on an example by Tomohiro
+Kubota, to which the following notice applies:
+
+Copyright © 1999-2001 Tomohiro KUBOTA.
+
+This manual is free software; you may redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2, or (at your option) any
+later version.
+
+---
+
+The following notice applies to the "grab" code, in addition to
+Tuomo Valkonen's copyright and licence:
+
+Copyright (c) Lukas Schroeder 2002
+
+Alternatively, you may apply the Clarified Artistic License to this file,
+since Lukas' contributions were originally under that.
+
+---
+
+The following notice applies to the Czech translation of Ion3:
+
+Copyright (c) Miroslav Kure 2004,2005,2006,2007.
+
+This file is distributed under the same license as the Ion3 package.
+
+---
+
+The following notice applies to the document "Configuring and
+extending with Lua":
+
+Copyright © 2003-2007 Tuomo Valkonen.
+
+This document is free; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+---
+
+The following notice applies to the document "Ion: Notes for
+the module and patch writer":
+
+Copyright © 2003-2004 Tuomo Valkonen.
+
+This document is free; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+---
+
+The GNU Lesser General Public License can be found in
+/usr/share/common-licenses/LGPL on Debian systems.
+
+The GNU General Public License can be found in
+/usr/share/common-licenses/GPL on Debian systems.
+
+---
+
+The Clarified Artistic License
+
+Preamble
+
+The intent of this document is to state the conditions under which a
+Package may be copied, such that the Copyright Holder maintains some
+semblance of artistic control over the development of the package, while
+giving the users of the package the right to use and distribute the Package
+in a more-or-less customary fashion, plus the right to make reasonable
+modifications.
+
+Definitions:
+
+"Package" refers to the collection of files distributed by the Copyright
+Holder, and derivatives of that collection of files created through textual
+modification.
+"Standard Version" refers to such a Package if it has not been modified, or
+has been modified in accordance with the wishes of the Copyright Holder as
+specified below.
+"Copyright Holder" is whoever is named in the copyright or copyrights for
+the package.
+"You" is you, if you're thinking about copying or distributing this
+Package.
+"Distribution fee" is a fee you charge for providing a copy of this Package
+to another party.
+"Freely Available" means that no fee is charged for the right to use the
+item, though there may be fees involved in handling the item. It also means
+that recipients of the item may redistribute it under the same conditions
+they received it.
+   
+ 1. You may make and give away verbatim copies of the source form of the
+    Standard Version of this Package without restriction, provided that you
+    duplicate all of the original copyright notices and associated
+    disclaimers.
+ 2. You may apply bug fixes, portability fixes and other modifications
+    derived from the Public Domain, or those made Freely Available, or from
+    the Copyright Holder. A Package modified in such a way shall still be
+    considered the Standard Version.
+ 3. You may otherwise modify your copy of this Package in any way, provided
+    that you insert a prominent notice in each changed file stating how and
+    when you changed that file, and provided that you do at least ONE of
+    the following:
+       
+     1. place your modifications in the Public Domain or otherwise make them
+        Freely Available, such as by posting said modifications to Usenet
+        or an equivalent medium, or placing the modifications on a major
+        network archive site allowing unrestricted access to them, or by
+        allowing the Copyright Holder to include your modifications in the
+        Standard Version of the Package.
+     2. use the modified Package only within your corporation or
+        organization.
+     3. rename any non-standard executables so the names do not conflict
+        with standard executables, which must also be provided, and provide
+        a separate manual page for each non-standard executable that
+        clearly documents how it differs from the Standard Version.
+     4. make other distribution arrangements with the Copyright Holder.
+     5. permit and encourge anyone who receives a copy of the modified
+        Package permission to make your modifications Freely Available in
+        some specific way.
+   
+ 4. You may distribute the programs of this Package in object code or
+    executable form, provided that you do at least ONE of the following:
+       
+     1. distribute a Standard Version of the executables and library files,
+        together with instructions (in the manual page or equivalent) on
+        where to get the Standard Version.
+     2. accompany the distribution with the machine-readable source of the
+        Package with your modifications.
+     3. give non-standard executables non-standard names, and clearly
+        document the differences in manual pages (or equivalent), together
+        with instructions on where to get the Standard Version.
+     4. make other distribution arrangements with the Copyright Holder.
+     5. offer the machine-readable source of the Package, with your
+        modifications, by mail order.
+   
+ 5. You may charge a distribution fee for any distribution of this Package.
+    If you offer support for this Package, you may charge any fee you
+    choose for that support. You may not charge a license fee for the right
+    to use this Package itself. You may distribute this Package in
+    aggregate with other (possibly commercial and possibly nonfree)
+    programs as part of a larger (possibly commercial and possibly nonfree)
+    software distribution, and charge license fees for other parts of that
+    software distribution, provided that you do not advertise this Package
+    as a product of your own. If the Package includes an interpreter, You
+    may embed this Package's interpreter within an executable of yours (by
+    linking); this shall be construed as a mere form of aggregation,
+    provided that the complete Standard Version of the interpreter is so
+    embedded.
+ 6. The scripts and library files supplied as input to or produced as output
+    from the programs of this Package do not automatically fall under the
+    copyright of this Package, but belong to whoever generated them, and
+    may be sold commercially, and may be aggregated with this Package. If
+    such scripts or library files are aggregated with this Package via the
+    so-called "undump" or "unexec" methods of producing a binary executable
+    image, then distribution of such an image shall neither be construed as
+    a distribution of this Package nor shall it fall under the restrictions
+    of Paragraphs 3 and 4, provided that you do not represent such an
+    executable image as a Standard Version of this Package.
+ 7. C subroutines (or comparably compiled subroutines in other languages)
+    supplied by you and linked into this Package in order to emulate
+    subroutines and variables of the language defined by this Package shall
+    not be considered part of this Package, but are the equivalent of input
+    as in Paragraph 6, provided these subroutines do not change the
+    language in any way that would cause it to fail the regression tests
+    for the language.
+ 8. Aggregation of the Standard Version of the Package with a commercial
+    distribution is always permitted provided that the use of this Package
+    is embedded; that is, when no overt attempt is made to make this
+    Package's interfaces visible to the end user of the commercial
+    distribution. Such use shall not be construed as a distribution of this
+    Package.
+ 9. The name of the Copyright Holder may not be used to endorse or promote
+    products derived from this software without specific prior written
+    permission.
+10. THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+    MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.

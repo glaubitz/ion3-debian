@@ -1,0 +1,4 @@
+build/system-inc.mk build/rules.mk usr/share/ion3/build
+install-sh config.h system.mk usr/lib/ion3
+build/libs.mk usr/lib/ion3/build
+libextl/libextl-mkexports usr/lib/ion3/libextl

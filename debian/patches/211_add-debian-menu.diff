@@ -1,0 +1,23 @@
+--- ion3.orig/etc/cfg_ioncore.lua
++++ ion3/etc/cfg_ioncore.lua
+@@ -335,6 +335,7 @@
+     menuentry("Help",           "mod_query.query_man(_)"),
+     menuentry("About Ion",      "mod_query.show_about_ion(_)"),
+     submenu("Styles",           "stylemenu"),
++    submenu("Debian",           "Debian"),
+     submenu("Session",          "sessionmenu"),
+ })
+ 
+@@ -380,3 +381,12 @@
+ defctxmenu("WClientWin", "Client window", {
+     menuentry("Kill",           "WClientWin.kill(_)"),
+ })
++
++-- Auto-generated Debian menu definitions
++if os and os.execute("test -x /usr/bin/update-menus") == 0 then
++    if ioncore.is_i18n() then
++        dopath("debian-menu-i18n")
++    else
++        dopath("debian-menu")
++    end
++end

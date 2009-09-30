@@ -1,0 +1,3 @@
+version=3
+http://modeemi.fi/~tuomov/ion/download.html \
+http://iki.fi/tuomov/dl/ion-3(?:rc)?-(\d{8})\.tar\.gz

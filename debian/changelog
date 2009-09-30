@@ -1,0 +1,1194 @@
+ion3 (20090110-3) unstable; urgency=low
+
+  * Remove reference to ion2 package from description - closes: #529958
+  * Update to relaxed licence
+    - Remove version check and warning on installation which are no
+      longer mandated
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Wed, 30 Sep 2009 21:52:01 +0100
+
+ion3 (20090110-2) unstable; urgency=low
+
+  * Apply upstream interim fixes (ion-3-20090526.diff)
+  * Fix/ignore issues reported by lintian:
+    - Install libextl-mkexports as executable
+    - Add ${misc:Depends} to ion3-dev
+    - Ignore necessary use of debconf in postinst
+    - Use debhelper 7
+  * Update standards version to 3.8.1; no changes required
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 13 Jun 2009 05:17:15 +0100
+
+ion3 (20090110-1) unstable; urgency=low
+
+  * New upstream version
+    - Obsoletes patches 101_ignore-missing-keys.diff and
+      102_ignore-bad-match.diff
+  * Update Swedish debconf translation, thanks to Olof Johansson
+    - closes: #503036
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 15 Feb 2009 20:06:29 +0000
+
+ion3 (20080825-1) unstable; urgency=low
+
+  * New upstream version
+    - Fix loss of size policy in some cases - closes: #492906
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 30 Aug 2008 20:12:15 +0100
+
+ion3 (20080707-3) unstable; urgency=low
+
+  * Replaced 101_ignore-missing-keys.diff and 102_ignore-bad-match.diff
+    with patches from upstream repository (ion-3plus)
+  * Replaced dependency on xbase-clients with x11-utils, which now
+    contains xmessage
+  * Updated standards version to 3.8.0
+    - Added debian/README.source documenting the use of quilt
+    - Added a note to debian/copyright that this package is not part
+      of the Debian system due to being non-free
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 24 Jul 2008 21:30:19 +0100
+
+ion3 (20080707-2) unstable; urgency=low
+
+  * Suppressed warnings for missing keys (101_ignore-missing-keys.diff)
+    - closes: #488673
+  * Added Swedish debconf translation - closes: #483419
+  * Added workaround for Xorg bug in reporting deleted windows
+    (102_ignore-bad-match.diff) - closes: #490601
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Wed, 23 Jul 2008 23:37:42 +0100
+
+ion3 (20080707-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Fri, 11 Jul 2008 01:13:55 +0100
+
+ion3 (20080411-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 12 Apr 2008 14:07:04 +0100
+
+ion3 (20080207-2) unstable; urgency=low
+
+  * Replaced debconf dependency with ${misc:Depends} - closes: #441938
+  * Added Spanish and Finnish debconf translations - closes: #458574, #468830
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Wed, 26 Mar 2008 01:26:40 +0000
+
+ion3 (20080207-1) unstable; urgency=low
+
+  * New upstream version
+    - First stable release of Ion3 - closes: #415287
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 07 Feb 2008 20:29:15 +0000
+
+ion3 (20080103-1) unstable; urgency=low
+
+  * New upstream version
+  * Fixed upstream regression which lost dockapp class names
+    (105_dockapp-class-from-hint-window.diff)
+  * Disabled dockapp size kludge for Docker (213_unkludge-docker.diff)
+  * Updated policy version to 3.7.3 (no other changes required)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 06 Jan 2008 20:54:41 +0000
+
+ion3 (20071109-1) unstable; urgency=low
+
+  * New upstream release
+  * Moved ion3-doc into separate source package
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 10 Nov 2007 04:27:00 +0000
+
+ion3 (20070927-1) unstable; urgency=low
+
+  * New upstream release
+  * Reenabled dh_strip since debugging information is disabled by default
+  * Changed menu section to conform to new menu policy
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 27 Sep 2007 23:58:23 +0100
+
+ion3 (20070902-1) unstable; urgency=low
+
+  * New upstream release
+  * Added upstream patch to fix implementation of "ml" and "mr" positions
+    for the dock
+  * Combined two Recommends lines in debian/control so that the uscan
+    dependencies are not ignored
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon,  3 Sep 2007 01:23:49 +0100
+
+ion3 (20070720-2) unstable; urgency=low
+
+  * Cleaned up patches
+  * Clarified use of /etc/default/ion3 in cfg_ioncore.lua
+  * Removed FAQ as it is now split into many pages which would require
+    substantial disk space if installed
+  * Updated README.Debian, including some information previously omitted
+    from the binary package by mistake
+  * Moved uscan dependencies to Recommends and made the upstream version
+    check tolerate failure of uscan - closes: #434550
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue,  7 Aug 2007 01:23:43 +0100
+
+ion3 (20070720-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun,  5 Aug 2007 00:18:27 +0100
+
+ion3 (20070708-1) unstable; urgency=low
+
+  * New upstream release
+  * Improved package descriptions and debconf templates as suggested
+    by debian-l10n-english review and by Helge Kreutzmann
+    - closes: #429444, #430695
+  * Added debconf translations - closes: #426456, #430694, #430698,
+    #430717, #430756, #430927, #431457, #431462, #432198
+  * Expanded explanation of system tray configuration
+  * Added modular configuration mechanism - closes: #413576, #418063
+  * Added xbase-clients to dependencies since we need xmessage
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon,  9 Jul 2007 02:38:04 +0100
+
+ion3 (20070608-1) unstable; urgency=medium
+
+  * New upstream release - closes: #428118, #430370, #430815
+  * Applied patch by Nedko Arnaudov to fix an upstream bug that would
+    result in a crash when using single-byte character encodings
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 28 Jun 2007 01:00:01 +0100
+
+ion3 (20070506-2) unstable; urgency=low
+
+  * Applied upstream version check to upgrades as well as first
+    installation
+  * Restored links in ion3-dev - closes: #425287
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 20 May 2007 19:45:37 +0100
+
+ion3 (20070506-1) unstable; urgency=low
+
+  * Per Olofsson retired as co-maintainer
+  * New upstream release - closes: #422527
+  * Changed to meet conditions on the use of the 'Ion' name, claimed
+    to be an unregistered trademark:
+    - Added upstream version check on first installation and requirement
+      that the user acknowledge that bugs in old versions should not be
+      reported upstream
+    - Moved to non-free section
+  * Removed dependency of ion3-dev on ion3, since the latter cannot
+    automatically be installed and only provided docs
+  * Fixed duplicate 'Lock screen' menu entry in 202_fix-menus.diff
+  * Removed 207_bindings-manpage.diff since it is broken and I do
+    not consider it necessary
+  * Created a separate doc-base control file for "Ion: Notes for the
+    module and patch writer" (ionnotes) - closes: #423114
+  * Added build-dependency on libxext-dev in preparation for Xorg 7.2
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 17 May 2007 01:02:35 +0100
+
+ion3 (20070318-2) unstable; urgency=low
+
+  * Applied upstream fix for configuration requests including dock sizing
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 25 Mar 2007 23:17:04 +0100
+
+ion3 (20070318-1) unstable; urgency=low
+
+  * New maintainer - closes: #414378
+  * New upstream release - closes: #413469
+  * Reverted upstream changes to full-screen behaviour which break dock
+    sizing
+  * Updated FAQ
+  * Added docker and ion3-scripts to suggested packages
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 25 Mar 2007 20:51:55 +0100
+
+ion3 (20070203-1) experimental; urgency=low
+
+  * New upstream release.
+  * Used libx11-dev instead libxinerama-dev in (build-)dependencies.
+  * Updated FAQ.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat,  3 Feb 2007 16:54:21 +0100
+
+ion3 (20061223-2) unstable; urgency=medium
+
+  * Added czech .desktop file translations from Miroslav Kure.
+    (closes: #394620)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat,  3 Feb 2007 17:35:46 +0100
+
+ion3 (20061223-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed backported patches (added in 20061029-3) which are part of
+    this new release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 23 Dec 2006 16:29:25 +0100
+
+ion3 (20061029-3) unstable; urgency=low
+
+  * Added a new patch from darcs to fix invalid setitimer values.
+    (closes: #376168, #394125)
+  * Added another new patch from darcs to fix a crash in tiling_placement_alt
+    handler. (closes: #396115)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 31 Oct 2006 20:17:46 +0100
+
+ion3 (20061029-2) unstable; urgency=low
+
+  * Added groff-base to build-dependencies. (really closes: #395092)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 29 Oct 2006 12:53:14 +0100
+
+ion3 (20061029-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fixed welcome message. (closes: #395092)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 29 Oct 2006 10:50:06 +0100
+
+ion3 (20061020-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Fixed workspace creation. (closes: #394198)
+  * Updated patch for new release:
+    + 207_bindings-manpage.diff
+  * Removed obsolete entries from lintian overrides file. (closes: #394191)
+  * Fixed copy & paste error in NEWS file. (closes: #394391)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon, 23 Oct 2006 20:01:47 +0200
+
+ion3 (20061015-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated patches for new release:
+    + 204_fix-bindings.diff
+    + 208_build-docs-with-hevea.diff
+  * Fixed path to libs.mk, rules.mk and system-inc.mk.
+  * Added some more lintian overrides.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 17 Oct 2006 20:18:09 +0200
+
+ion3 (20060524-3) unstable; urgency=low
+
+  * Depend on x-terminal-emulator | xterm. (closes: #389393)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 26 Sep 2006 23:32:40 +0200
+
+ion3 (20060524-2) unstable; urgency=low
+
+  * Workaround bashism in debian/rules. (closes: #379588)
+  * Readded Debian-menu to default configuration. (closes: #376446)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon, 31 Jul 2006 17:49:42 +0200
+
+ion3 (20060524-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20060524.
+  * Removed backported patches (added in 20060519-2, 20060519-3 and 20060519-4)
+    which are part of this new release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu, 25 May 2006 04:36:25 +0200
+
+ion3 (20060519-4) experimental; urgency=low
+
+  * Added yet another new patch which fixes more Lua 5.1 stuff.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 20 May 2006 10:57:02 -0500
+
+ion3 (20060519-3) experimental; urgency=low
+
+  * Added another new patch which fixes more Lua 5.1 stuff.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 19 May 2006 13:06:06 -0500
+
+ion3 (20060519-2) experimental; urgency=low
+
+  * Added a new patch from darcs to get ioncore_bindings.lua working properly
+    with Lua 5.1.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 19 May 2006 10:01:02 -0500
+
+ion3 (20060519-1) experimental; urgency=low
+
+  * New upstream release ion-3ds-20060519.
+    + Switched to Lua 5.1.
+  * Upload to experimental, because most scripts from ion3-scripts package no
+    longer work with Lua 5.1.
+  * Removed backported patch (added in 20060326-2) which is part of this new
+    release.
+  * Updated patches for new release:
+    + 201_fix-paths.diff
+    + 207_bindings-manpage.diff
+  * Updated standards-version to 3.7.2.0, no changes required.
+  * Added pkg-config to build-dependencies.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 19 May 2006 00:18:46 -0500
+
+ion3 (20060326-2) unstable; urgency=medium
+
+  * Added a new patch from darcs to fix default_ws_type lookup.
+    (closes: #358533)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 31 Mar 2006 21:23:01 +0200
+
+ion3 (20060326-1) unstable; urgency=medium
+
+  * New upstream release ion-3ds-20060326.
+    + Increments counter in statusbar list building. (closes: #350848)
+  * Updated patch 202_fix-menus.diff.
+  * Added notes about unstripped binaries and libraries. (closes: #344027)
+  * Added notes about docker for gnome systray icons. (closes: #337512)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 26 Mar 2006 12:10:23 +0200
+
+ion3 (20060317-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20060317.
+  * Updated patches 202_fix-menus.diff, 204_fix-bindings.diff and
+    209_use-etc-default.diff.
+  * Added notes about changes in the set of configuration files.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 17 Mar 2006 21:57:14 +0100
+
+ion3 (20060305-2) unstable; urgency=low
+
+  * Fixed build-dependencies. (closes: #355837)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed,  8 Mar 2006 09:39:05 +0100
+
+ion3 (20060305-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20060305.
+  * Removed backported patches (added in 20060107-2 and 20060107-3) which
+    are part of this new release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon,  6 Mar 2006 17:26:47 +0100
+
+ion3 (20060107-4) unstable; urgency=low
+
+  * Added lintian override for usr-doc-symlink-without-dependency in ion3-dev,
+    it's handled via ion3-api-${Ion:ApiVersion}.
+  * Used /usr/bin/install-menu instead /usr/sbin/install-menu.
+  * Corrected FSF address in copyright file.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 27 Jan 2006 14:24:41 +0100
+
+ion3 (20060107-3) unstable; urgency=medium
+
+  * Added a new patch from darcs which fixes unnecessary resize of the
+    statusbar.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed, 25 Jan 2006 18:02:33 +0100
+
+ion3 (20060107-2) unstable; urgency=medium
+
+  * Added a new patch from darcs which fixes a segmentation fault.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed, 25 Jan 2006 14:18:35 +0100
+
+ion3 (20060107-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20060107.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun,  8 Jan 2006 12:13:01 +0100
+
+ion3 (20051210-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20051210.
+  * Removed backported patches (added in 20051029-3) which are part of this
+    new release.
+  * Moved the cfg_debian dopath in cfg_ion.lua above the default META and
+    ALTMETA keys settings.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 10 Dec 2005 22:30:42 +0100
+
+ion3 (20051029-3) unstable; urgency=low
+
+  * Added two new patches from darcs to no longer keep an already deleted 
+    logfile open. (closes: #340559)
+  * Tweaked dependencies to make backporting easier.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 26 Nov 2005 21:45:24 +0100
+
+ion3 (20051029-2) unstable; urgency=low
+
+  * Fixed dependency of ion3-dev on ion3 to make it bin-nmu save.
+    (closes: #336377)
+  * Removed libtool from ion3-dev dependencies.
+  * Updated FAQ.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 12 Nov 2005 18:12:35 +0100
+
+ion3 (20051029-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20051029.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 29 Oct 2005 16:39:39 +0200
+
+ion3 (20051023-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20051023.
+  * Removed backported patch (added in 20050820-5) which is part of this new
+    release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 23 Oct 2005 18:48:51 +0200
+
+ion3 (20050820-5) unstable; urgency=low
+
+  * Recommend some font packages, because helvetica is used in some styles.
+    (closes: #332211)
+  * Added a new patch from darcs which removes the mail monitor from default
+    statusbar template. (closes: #332181)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed,  5 Oct 2005 09:08:05 +0200
+
+ion3 (20050820-4) unstable; urgency=low
+
+  * Removed the Evolution kludge because it doesn't work anymore.
+
+ -- Per Olofsson <pelle@debian.org>  Mon, 29 Aug 2005 18:50:35 +0200
+
+ion3 (20050820-3) unstable; urgency=low
+
+  * Correctly calculate Ion:ApiVersion substvar so that we can provide
+    ion3-api-ION_API_VERSION.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 28 Aug 2005 00:38:00 +0200
+
+ion3 (20050820-2) unstable; urgency=low
+
+  * Fixed a bug when including /etc/default/ion3 in cfg_ion.lua, thanks
+    to Jaakko Niemi for reporting.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 27 Aug 2005 20:49:12 +0200
+
+ion3 (20050820-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050820.
+  * Removed backported patches (added in 20050728-1, -2 and -5) which are
+    part of this new release.
+  * Updated FAQ.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 20 Aug 2005 14:36:09 +0200
+
+ion3 (20050728-5) unstable; urgency=low
+
+  * Added patch which makes Ion try to read configuration files without
+    extensions as well. Needed to be able to read /etc/default/ion3.
+
+ -- Per Olofsson <pelle@debian.org>  Tue, 16 Aug 2005 17:05:02 +0200
+
+ion3 (20050728-4) unstable; urgency=low
+
+  * New configuration file /etc/default/ion3, for an easy configuration
+    of the MOD1 and MOD2 keys.
+  * Used dh_install to install ion3 lintian overrides file.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 14 Aug 2005 09:44:35 +0200
+
+ion3 (20050728-3) unstable; urgency=low
+
+  * Mention ion3-scripts package in README.Debian. (closes: #319872)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat,  6 Aug 2005 20:19:52 +0200
+
+ion3 (20050728-2) unstable; urgency=low
+
+  * Reverted size selection of docked non-dockapps modifications.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 31 Jul 2005 23:05:46 +0200
+
+ion3 (20050728-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050728.
+  * Removed backported patches (added in 20050625-2, and -4) which are part
+    of this release.
+  * Added a new patch to disable WCOREDUMP().
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu, 28 Jul 2005 20:17:46 +0200
+
+ion3 (20050625-6) unstable; urgency=low
+
+  * Used libxinerama-dev instead of libx11-dev in build-dependencies and
+    ion3-dev dependencies.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 16 Jul 2005 19:30:25 +0200
+
+ion3 (20050625-5) unstable; urgency=low
+
+  * Updated FAQ.
+  * Revoked modifications from 20050625-3, sbuild can't handle the new
+    build-dependencies.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon,  4 Jul 2005 08:12:57 +0200
+
+ion3 (20050625-4) unstable; urgency=low
+
+  * Added a new patch from darcs which improves the statusd_mail error
+    message. (closes: #303003)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun,  3 Jul 2005 18:51:02 +0200
+
+ion3 (20050625-3) unstable; urgency=low
+
+  * Added Build-Depends libxinerama-dev, libxext-dev and libice-dev. This
+    seems to be the only way to get an updated version of ion3 into Ubuntu.
+    Nobody cares about the completely outdated ion3 package in Ubuntu, and
+    people keep asking me when I'm going to update it.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat,  2 Jul 2005 11:55:45 +0200
+
+ion3 (20050625-2) unstable; urgency=low
+
+  * Added a new patch from darcs which fixes the "goto when scratchpad
+    is active" patch.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu, 30 Jun 2005 09:25:11 +0200
+
+ion3 (20050625-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050625.
+  * Removed backported patches (added in 20050607-2, -3, -4 and -5) which are
+    part of this release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 26 Jun 2005 17:49:35 +0200
+
+ion3 (20050607-5) unstable; urgency=low
+
+  * Added a new patch from darcs which adds a setlocale() call to statusd.
+    (closes: #313086)
+  * Updated Standards-Version to 3.6.2.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu, 23 Jun 2005 09:06:39 +0200
+
+ion3 (20050607-4) unstable; urgency=low
+
+  * Even more patches from darcs for better completion.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed, 22 Jun 2005 09:11:39 +0200
+
+ion3 (20050607-3) unstable; urgency=low
+
+  * Updated the german PO file, thanks to Jens Seidel. (closes: #314038)
+  * Added some more patches from darcs for better completion.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed, 15 Jun 2005 09:12:58 +0200
+
+ion3 (20050607-2) unstable; urgency=low
+
+  * Added a new patch from darcs for better tracking of multiple pending
+    completions.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 11 Jun 2005 00:39:46 +0200
+
+ion3 (20050607-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050607.
+  * Removed backported patches (added in 20050502-2) which are part of this
+    release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue,  7 Jun 2005 18:06:24 +0200
+
+ion3 (20050502-3) unstable; urgency=low
+
+  * Added install-sh to ion3-dev.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 28 May 2005 23:25:29 +0200
+
+ion3 (20050502-2) unstable; urgency=medium
+
+  * Added a new patch from darcs for faster fontset kludge when using utf-8
+    locales.
+  * Added a new patch from darcs to fix initial height of dock.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 10 May 2005 19:02:35 +0200
+
+ion3 (20050502-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050502.
+    + Fixed activity notification. (closes: #305271)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon,  2 May 2005 20:06:52 +0200
+
+ion3 (20050406-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050406.
+  * Removed backported patches (added in 20050322-2, -4 and -6) which are part
+    of this release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed,  6 Apr 2005 14:01:32 +0200
+
+ion3 (20050322-6) unstable; urgency=medium
+
+  * Added a new patch from darcs to fix a crash in name allocation code.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun,  3 Apr 2005 18:16:35 +0200
+
+ion3 (20050322-5) unstable; urgency=medium
+
+  * Added some lintian overrides for unstripped binaries and libraries.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat,  2 Apr 2005 01:48:25 +0200
+
+ion3 (20050322-4) unstable; urgency=medium
+
+  * Added a new patch from darcs to fix a typo in de/fontset.c.
+    (closes: #302221)
+  * Added a new patch from darcs which should fix the BadMatch segfaults.
+    (closes: #302607)
+  * Disabled dh_strip on upstreams request.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat,  2 Apr 2005 01:06:35 +0200
+
+ion3 (20050322-3) unstable; urgency=low
+
+  * Added libs.mk and libextl-mkexports to ion3-dev. (closes: #301728)
+  * Added a missing comma to an example in cfg_sp.lua. (closes: #302040)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed, 30 Mar 2005 18:33:25 +0200
+
+ion3 (20050322-2) unstable; urgency=low
+
+  * Added a new patch from darcs which fixes the menu entry for tagging, it
+    wasn't updated to the renamed toggle functions.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 25 Mar 2005 13:09:25 +0100
+
+ion3 (20050322-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050322.
+  * Added note about changed or renamed exported toggle functions to NEWS
+    file.
+  * Updated patch which modifies documentation to build with hevea.
+  * Updated patch which adds ion-lock script.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 22 Mar 2005 17:24:35 +0100
+
+ion3 (20050304-1-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050304-1.
+    + Tab completion now handles spaces correct. (closes: #296060)
+  * Removed backported patches (added in 20050227-1) which are part of this
+    release.
+  * Updated patch which modifies documentation to build with hevea.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri,  4 Mar 2005 11:16:51 +0100
+
+ion3 (20050227-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050227.
+  * Removed reference to README.dock in README.Debian, it was removed in
+    20050116-2 (closes: #297860).
+  * Added a new patch from darcs which fixes a bug that triggers an assertion
+    failure.
+  * Fixed path in ion3-doc.doc-base.config, it still used ion2-doc as
+    directory.
+  * Added changelog to ion3-doc package.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu,  3 Mar 2005 23:06:25 +0100
+
+ion3 (20050116-4) unstable; urgency=low
+
+  * Build documentation using Hevea.
+
+ -- Per Olofsson <pelle@debian.org>  Wed, 23 Feb 2005 15:15:48 +0100
+
+ion3 (20050116-3) unstable; urgency=medium
+
+  * Fixed dangling symlink /etc/X11/ion3/draw.lua (closes: #295365).
+  * Added german translations (welcome message and manpages) from svn.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 18 Feb 2005 20:45:35 +0100
+
+ion3 (20050116-2) unstable; urgency=low
+
+  * Package has stabilized and is ready for sarge (closes: #261121).
+  * Added a new patch 207_bindings-manpage.diff which moves WFrame bindings
+    above WScreen bindings in ion3 and pwm3 manpages (closes: #292561).
+  * Removed README.dock, it was written for ion2 and does no longer apply
+    for ion3 (closes: #260451).
+  * Switched maintainer and uploader values on Per's request, and used his
+    debian.org address.
+  * Removed extra license file /usr/share/doc/ion3/LICENSE.gz.
+  * Renamed upstream changelog to /usr/share/doc/ion3/changelog.gz.
+  * Lowered first capital in short package descriptions.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 13 Feb 2005 16:32:25 +0100
+
+ion3 (20050116-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050116.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 16 Jan 2005 20:45:36 +0100
+
+ion3 (20050102-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20050102.
+  * Fixed wrong target name for docks in README.Debian (closes: #276939).
+  * Moved .desktop files to /usr/share/xsessions (closes: #275189).
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun,  2 Jan 2005 15:19:23 +0100
+
+ion3 (20041104-1) unstable; urgency=low
+
+  * New upstream release ion-3ds-20041104.
+    + Fixed segfault in ioncore/names.c (closes: #260106).
+  * New co-maintainer, added myself to uploaders.
+  * Corrected build-dependencies to reflect the new xfree86 library
+    arrangement.
+  * Split out some patches and converted to dpatch.
+  * Package ion3-dev is now arch:all.
+  * Removed outdated documentation.
+  * Removed libtool and libltdl3-dev from build-dependencies.
+  * Added NEWS.Debian file.
+  * Thanks to Jurij Smakov for testing and feedback.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon, 13 Dec 2004 20:15:26 +0100
+
+ion3 (20040703-1) unstable; urgency=low
+
+  * New upstream release.
+  * Suggest menu (>= 2.1.9) because older versions don't support
+    outputencoding.
+  * Added ion-lock, a script which uses xscreensaver if it's available,
+    otherwise xlock.
+  * Automatically find headers to install so I don't have to keep track
+    of them manually.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Fri, 16 Jul 2004 23:00:02 +0200
+
+ion3 (20040316-1-2) unstable; urgency=low
+
+  * Use ISO-8859-1 as output encoding in the menu-method.
+  * Added generation of a special i18n menu using the current locale.
+  * Moved the generated menu files to /var/lib/ion3.
+  * Quote properly in menu-method.
+  * debian/update-faq now removes the old version.
+  * Don't compress Lua example files so that examples/index.html doesn't
+    get broken links.
+  * Removed the unnecessary creation of the include/ion symlink in
+    the source from debian/rules.
+  * Removed examples, because they're for Ion2.
+  * Renamed debian-menus.lua to debian-menu.lua.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Thu, 10 Jun 2004 19:12:07 +0200
+
+ion3 (20040316-1-1) unstable; urgency=low
+
+  * New branch.
+  * Removed the 0.0. from the version number. The dates are not likely to
+    go away.
+  * Changed all (most) occurences of ion2 to ion3, and pwm2 to pwm3.
+  * Lowered priority to extra.
+  * Remove *.out when cleaning in ion-doc/Makefile.
+  * Commented out the dummy os.execute in share/ioncorelib-luaext.lua.
+  * Lowered priority of alternatives by one point each.
+  * Added notes about the examples and the documentation being out of
+    date.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Mon, 26 Apr 2004 17:39:37 +0200
+
+ion2 (0.0.20040407-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Shouldn't get a box cursor when switching from fullscreen mode
+      too fast. Closes: #242153.
+    - Shouldn't take long time to start xterm now. Closes: #245518.
+  * Lowered ion2-doc's priority to extra.
+  * Created and added ion2.desktop and pwm2.desktop to /etc/dm/Sessions so
+    that Ion can be selected from gdm and similar. Closes: #245457.
+  * Updated the copyright file.
+  * Added kludge for wmdate to dock.lua.
+  * Create the include/ion symlink when building if it doesn't exist,
+    since Subversion doesn't allow symlinks.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sat, 24 Apr 2004 00:50:57 +0200
+
+ion2 (0.0.20040207-3) unstable; urgency=low
+
+  * Versioned the Lua dependencies to >> 5.0.2.
+  * Still remove precompiled Lua files because they don't belong in share,
+    but this will be changed in next upstream release where they're placed
+    in /usr/lib.
+  * Removed bashism from ion2's prerm.
+  * Added example scripts from the website.
+  * Added FAQ from the website and wrote the update-faq script to automate
+    the downloading of the FAQ.
+  * Added debian/packaging-notes.txt with some notes about the packaging.
+  * Removed references to ion-devel from README.dock.
+  * Fixed pwm2's loading of debian-menus.lua. Closes: #239396.
+  * Quoted the needs value in the menu file because lintian complained
+    about it.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Fri,  2 Apr 2004 22:44:22 +0200
+
+ion2 (0.0.20040207-2) unstable; urgency=low
+
+  * Check if the menu package is installed before including
+    /usr/share/ion2/debian-menus.lua, to avoid errors if this is not the
+    case. Closes: #234343.
+  * Raised x-window-manager alternative priority to 50 per policy
+    11.8.4.
+  * Also add pwm2 as an alternative to x-window-manager. But set priority
+    to 49 because it's less important than ion2.
+  * Removed leading "A" from ion2 synopsis.
+  * Updated description.
+  * Added website URL to description.
+  * Updated doc-base description as well.
+  * Generate PDF version of the documentation instead of PostScript. This
+    is what the developer's reference tells me to do and, well, why
+    not. You get nice hyperlinks.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Tue,  2 Mar 2004 00:19:34 +0100
+
+ion2 (0.0.20040207-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed the prebuilt documentation included in the new ion-doc
+    version.
+  * Removed the ionnotes manual because upstream doesn't think it's mature
+    enough.
+  * Use the target realclean when cleaning the documentation source
+    directory.
+  * Rewrote ion2-doc description.
+  * Small change in ion2 description.
+  * Modified debian/ion2.menu-method to use complete section names as
+    identifiers for submenus instead of just titles. This makes it
+    possible to have more than one submenu with the same title.
+  * Don't use absolute path when including debian-menus.lua from
+    ion-menus.lua.
+  * Place debian-menus.lua in /usr/share/ion2 instead of
+    /etc/X11/ion2. This makes sure the user doesn't accidentally copy it
+    to ~/.ion2/.
+  * Don't refer to /usr/share/doc/menu/README in the generated menu file
+    because it doesn't exist.
+  * Remove /usr/share/ion2/debian-menus.lua in debian/ion2.prerm when
+    removing the package.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun,  8 Feb 2004 01:09:57 +0100
+
+ion2 (0.0.20040131-1) unstable; urgency=low
+
+  * New upstream release.
+  * Changed reference in man/ion.1.in from X(1x) to X(7x) because the
+    former does not seem to exist in Debian.
+  * Hevea fix in ion-doc/ionconf.tex again (forgot to change %begin to
+    \begin etc.).
+  * Don't give option dvipdfm to hyperref in ion-doc/macros.tex because we
+    don't make pdf's in this package and it produces a lot of ugly
+    warnings when converting to Postscript.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun,  1 Feb 2004 15:50:57 +0100
+
+ion2 (0.0.20040127-1) unstable; urgency=low
+
+  * New upstream release.
+  * Depend on libtool/libltdl 1.4.1, not 1.4.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Wed, 28 Jan 2004 18:52:34 +0100
+
+ion2 (0.0.20040121-1) unstable; urgency=low
+
+  * New upstream release.
+  * Changed package name to ion2 and updated all references.
+  * Added reference to ion2-doc package to man/ion.1.in.
+  * Changed priority to optional.
+  * Added that extra .0 to Standards-Version :)
+  * Updated descriptions.
+  * Only depend on libtool (>> 1.4) and gcc (>> 3).
+  * Removed ion2-dev.preinst because there's no need to remove a doc
+    directory from ion-devel-dev anymore.
+  * Updated share/welcome_message.head.
+  * Added dependency on libtool and gcc (>> 3) to ion2-dev.
+  * Added conflict with ion versions which do not use alternatives for the
+    ion executable.
+  * Added copyright notice from dock/dock.c to debian/copyright and made
+    some small indentation changes.
+  * Uncommented POSIX_SOURCE and XOPEN_SOURCE in system.mk and removed
+    -ansi flag from them (we use C99).
+  * Install dock/README.dock.
+  * Added Ion menu-method and added code to include it in ion-menus.lua.
+  * Wrote a README.Debian for the ion2 package.
+  * Hevea fix in ion-doc/ionconf.tex.
+  * Added PWM2 to Debian menu.
+  * Restart to PWM2 instead of PWM in etc/ion-menus.lua.
+  * Updated PWM menus similar to the Ion menus (including adding Debian
+    menu).
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun, 25 Jan 2004 01:17:04 +0100
+
+ion-devel (0.0.20031211-3) unstable; urgency=low
+
+  * Removed DEFAULT_MOD+Menu keybinding since the Menu keysym is not
+    available in all XFree86 keyboard models, and it generates an error
+    message on startup if it is not. This has already been done in the Ion SVN
+    repository. (closes: #226034)
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun,  4 Jan 2004 17:07:26 +0100
+
+ion-devel (0.0.20031211-2) unstable; urgency=low
+
+  * Moved all Build-Depends-Indep to Build-Depends because the policy is
+    flawed and buildd's can't handle it. (closes: #225731)
+
+ -- Per Olofsson <pelle@dsv.su.se>  Thu,  1 Jan 2004 13:37:55 +0100
+
+ion-devel (0.0.20031211-1) unstable; urgency=low
+
+  * New upstream release.
+    - Note that user configuration is now in ~/.ion2 instead of
+      ~/.ion-devel.
+  * ion-doc updated to version 20031211.
+  * Remove ion-doc/.log when doing make clean.
+  * Added copyright notice for the documentation to debian/copyright.
+  * Provide ion-devel-api-n where n is the API version.
+  * Don't rename ioncore in debian/rules because it doesn't exist anymore.
+  * Removed ion-devel-core manual page because ion-devel-core doesn't
+    exist anymore.
+  * Rename ion.1 not ion.1x in debian/rules.
+  * Rename pwm binary and manual page to pwm-devel in debian/rules.
+  * Modified man/pwm.1.in similarly to the ion manpage to point out that
+    it's the -devel version.
+  * Modified man/ion.1.in to refer to the ion-devel-doc package for
+    documentation.
+  * Rebuilt man/ion.1.in.txt.
+  * Modified share/welcome_message.head to fit the Debian package better.
+  * Pulled ion/ion.c from CVS to fix bug which caused
+    ~/.ion2/.welcome_msg_displayed to be created with weird permissions.
+  * Pulled etc/look-clean.lua from CVS to get a menu font size which exist
+    in the standard Debian X font packages.
+  * Pulled query/querylib.lua from CVS to make the default manpage work
+    (F1+Enter).
+  * Restructured debian/copyright once again and added some information
+    which were missing.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Fri, 26 Dec 2003 22:18:37 +0100
+
+ion-devel (0.0.20031121-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added ion-devel-doc. (closes: #212719)
+  * Modified the source for the documentation to build HTML output with
+    hevea instead of latex2html, since latex2html is
+    non-free. Unfortunately the output is not as good, but it is probably
+    good enough.
+  * Added README.Debian to ion-devel-doc which informs about the above.
+  * Uncommented the XMMS kludges in etc/kludges.lua which was added by
+    upstream.
+  * Removed -D_GNU_SOURCE from POSIX_SOURCE variable in system.mk because
+    it's now defined in the affected source file (libtu/output.c).
+  * Modified query/querylib.lua to prompt "Manual page (ion-devel)"
+    instead of "Manual page (ion)" when F1 is pressed.
+  * Remove pre-compiled Lua files /usr/share/ion-devel/*.lc because lua
+    5.0.0 is buggy. They will be included when lua 5.0.1 is in Debian.
+  * Use x-terminal-emulator and sensible-browser in etc/ioncore-menus.lua.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Mon,  8 Dec 2003 18:37:38 +0100
+
+ion-devel (0.0.20030814-3) unstable; urgency=low
+
+  * Show the ion-devel manpage when pressing Mod1+F1, not the ion
+    manpage. Also use the ion-devel manpage as default when pressing F1.
+    (closes: #215288)
+  * Disabled UTF-8 support because it causes problems for some
+    people. (closes: #216511)
+  * Restructured beginning of debian/copyright.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Thu,  6 Nov 2003 22:21:31 +0100
+
+ion-devel (0.0.20030814-2) unstable; urgency=low
+
+  * Call uname without -p in etc/ioncore-bindings.lua since that option is
+    not present in Debian. (closes: #212628)
+  * Split the rules in debian/rules into -indep and -arch for an
+    ion-devel-doc package, but removed the actual package for now because
+    of GFDL non-freeness.
+  * Restructured debian/copyright a little.
+  * Define _GNU_SOURCE when compiling so that asprintf gets declared.
+  * Took luaextl/luaextl.[ch] and ioncore/readconfig.c from the CVS
+    snapshot to fix the funky type coercion issue with va_list which made
+    Ion segfault on powerpc and (presumably) s390.  (closes: #212781)
+  * Corrected build-deps: (closes: #214330, #214386)
+    - gcc needs to be at least 3.0
+    - only debhelper >=4 is needed, not 4.1
+    - libtool/libltdl only needs to be >=1.4.2 apparently, not 1.4.3
+  * Added debian/examples/alt_resize.lua with code for more intuitive
+    resizing. (closes: #213903)
+  * Added debian/examples/mover.lua with code for moving client windows to
+    adjacent frames.
+  * Modified the description further and added some information about the
+    configuration language and the modularity.
+  * Sponsored by Joey Hess.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Fri, 10 Oct 2003 22:45:20 +0200
+
+ion-devel (0.0.20030814-1) unstable; urgency=low
+
+  * New upstream release. (closes: #205012)
+    - Should build on all archs now. (closes: #200981)
+  * Remove unused .a files in /usr/lib/ion-devel (only the shared
+    libraries are used).
+  * Updated Standards-Version to 3.6.1.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Wed, 24 Sep 2003 16:30:49 +0200
+
+ion-devel (0.0.20030627-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Apply patch from Matt Kraai to get the package building on powerpc
+    and s390 (closes: #200981).    
+
+ -- Steve Langasek <vorlon@debian.org>  Mon,  8 Sep 2003 01:19:33 -0500
+
+ion-devel (0.0.20030627-1) unstable; urgency=low
+
+  * New upstream release.
+  * Dependency on Lua 5.0 added.
+  * UTF-8 support enabled.
+  * debian/rules: Don't make depend and don't pass unnecessary variables
+    to make.
+  * Include rules.mk and mkexports.lua in ion-devel-dev.
+  * Don't rename version.h and config.h anymore. Should be solved
+    upstream. ION_DEBIAN_PACKAGE makefile variable removed.
+  * Helper scripts have been moved to share and lib upstream, so manual
+    pages have been removed and name changes for the scripts skipped.
+  * Moved config.h and system.mk to /usr/lib/ion-devel, the other
+    development files are in /usr/share/ion-devel.
+  * License change and copyright file cleanup.
+  * Various changes to accommodate upstream changes.
+  * A lot of changes removed due to successful upstream coordination :)
+  * Use x-terminal-emulator instead of xterm, this had apparently
+    disappeared in some version. (closes: #196410)
+  * Remove /etc/X11/ion-devel and everything in it if purging.
+  * Rewrote most of the package descriptions.
+  * Removed some Galeon stuff from kludges.lua as upstream now provides
+    one kludge for Galeon, and it is probably enough (better to keep close
+    to upstream).
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun, 29 Jun 2003 18:33:08 +0200
+
+ion-devel (0.0.20030327-2) unstable; urgency=low
+
+  * Use -fPIC when compiling modules (closes: #188917).
+
+ -- Per Olofsson <pelle@dsv.su.se>  Thu, 24 Apr 2003 20:41:15 +0200
+
+ion-devel (0.0.20030327-1) unstable; urgency=low
+
+  * New upstream release (closes: #183900).
+  * Various changes to accommodate new source layout.
+  * system*.mk and ion-config.h now placed in /usr/lib/ion-devel/dev
+    because modules will be placed directly in /usr/lib/ion-devel per new
+    upstream default.
+  * draw.conf is now symlinked to look-clean.conf in ion-devel.postinst
+    per new upstream default.
+  * Added ion-devel.postrm and moved removal of draw.conf symlink from
+    ion-devel.prerm to ion-devel.postrm.
+  * Added #DEBHELPER# tag to ion-devel.preinst and ion-devel.postrm.
+  * Changed the paths in system.mk to proper values so that modules can
+    use them.
+  * Added ION_DEBIAN_PACKAGE variable to system.mk to make it possible for
+    add-on modules to determine if they are to be built against the Debian
+    package.
+  * Disabled Xft support because it is broken when using non-truetype
+    fonts.
+  * Added conflict with incompatible ion-devel-dock versions.
+  * Added workaround for make realclean bug to debian/rules.
+  * Renamed ioncore to ion-devel-core and made sure it was called from the
+    script.
+  * Fixed the ion and pwm scripts so they use the correct ETCDIR.
+  * Added ion-devel-core manual page.
+  * Updated to standards version 3.5.9.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun, 30 Mar 2003 21:43:24 +0200
+
+ion-devel (0.0.20030225-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switched to debhelper.
+  * Added conflict with ion-devel-metadome.
+  * Added version.h to ion-devel-dev as ion-version.h.
+  * Added system-inc.mk to ion-devel-dev.
+  * Switched to libxft2.
+  * Moved system.mk, system-inc.mk and ion-config.h to /usr/lib/ion-devel
+    and added symlinks.
+  * Renamed /usr/include/ion to /usr/include/ion-devel.
+  * Moved some things from debian/rules to system.mk.
+  * CF_XFT back in system.mk, wmcore/common.h less modified.
+  * Changed ion-devel-dev's package description.
+  * Moved manual pages to debian/man.
+  * Changed package description.
+  * Some small changes to the manual pages.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sun,  2 Mar 2003 00:23:07 +0100
+
+ion-devel (0.0.20030131-2) unstable; urgency=low
+
+  * Added dependency on xlibs-dev to ion-devel-dev.
+  * Install libtu headers in /usr/include/ion/libtu/include/libtu instead
+    of /usr/include/ion/libtu since that is what modules expect.
+  * system.mk is now installed to /usr/include/ion.
+  * /usr/share/doc/ion-devel-dev is now a symlink to ion-devel.
+  * Added some kludges for Galeon and Evolution to kludges.conf
+    (closes: #180568)
+
+ -- Per Olofsson <pelle@dsv.su.se>  Fri, 14 Feb 2003 18:19:00 +0100
+
+ion-devel (0.0.20030131-1) unstable; urgency=low
+
+  * New upstream release.
+  * Xft support enabled.
+  * Added ion-devel-dev package (for compiling modules).
+  * Changed reference to ion-runinxterm in query/query.c to
+    ion-devel-runinxterm.
+  * Uses ion-config.h instead of config.h (build process creates symlink).
+  * Moved CF_XFT define from system.mk to config.h.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sat,  1 Feb 2003 00:52:45 +0100
+
+ion-devel (0.0.20021229-1) unstable; urgency=low
+
+  * New upstream release.
+  * ion-devel-view now runs sensible-browser instead of Mozilla when
+    viewing a URL.
+  * The compilation option -pedantic-errors was changed to -pedantic in
+    system.mk because it breaks on /usr/include/regex.h.
+  * Patch to make Emacs 21 not freeze during startup was applied (modifies
+    wmcore/clientwin.c).
+  * Will hopefully be added to Debian (closes: #173593)
+
+ -- Per Olofsson <pelle@dsv.su.se>  Tue, 31 Dec 2002 01:03:45 +0100
+
+ion-devel (0.0.20021104-3) unstable; urgency=low
+
+  * The /etc/X11/ion-devel/draw.conf symlink is not listed as a conffile
+    anymore, it is instead created and removed by postinst and prerm.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Sat,  7 Dec 2002 17:49:59 +0100
+
+ion-devel (0.0.20021104-2) unstable; urgency=low
+
+  * Added -devel to the name of all executables, the manual page and
+    updated affected references.  Removed conflict with ion from
+    debian/control.
+  * When ion-devel is the default window manager,
+    /etc/alternatives/x-window-manager.1.gz now points to the correct
+    file.
+  * draw.conf is now also listed as a conffile.
+  * Wrote manual pages for the scripts (ion-devel-*)
+  * ion-devel-view now uses Mozilla instead of Netscape to open URLs
+  
+ -- Per Olofsson <pelle@dsv.su.se>  Fri,  6 Dec 2002 22:57:00 +0100
+
+ion-devel (0.0.20021104-1) unstable; urgency=low
+  
+  * Initial release.  Started out with diff from Tommi Virtanen's stable
+    ion package.
+
+ -- Per Olofsson <pelle@dsv.su.se>  Mon,  2 Dec 2002 23:54:31 +0100

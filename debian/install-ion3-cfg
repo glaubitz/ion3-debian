@@ -1,0 +1,56 @@
+#!/bin/bash
+
+set -e
+
+usage() {
+    echo >&2 "Usage: install-ion3-cfg [--remove] config-basename"
+}
+
+config_dir=/etc/X11/ion3
+config_list=$config_dir/cfg_debian_ext.lua
+
+action=add
+
+while true; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0
+	    ;;
+	--remove)
+	    action=remove
+	    ;;
+	-*)
+	    usage
+	    exit 2
+	    ;;
+	*)
+	    break
+	    ;;
+    esac
+    shift
+done
+
+if [ $# -ne 1 ]; then
+    usage
+    exit 2
+fi
+
+name="$1"
+
+case $action in
+    add)
+	if ! [ -f "$config_dir/$name.lua" ]; then
+	    echo >&2 "$config_dir/$name.lua does not exist!"
+	    exit 2
+	fi
+	if ! egrep -q "^ *dopath *\\( *\"$name\" *\\) *\$" \
+	    "$config_list"; then
+	    echo "dopath(\"$name\")" >> "$config_list"
+	fi
+	;;
+    remove)
+	sed -i -r -e "/^ *dopath *\\( *\"$name\" *\\) *\$/d" \
+	    "$config_list"
+	;;
+esac

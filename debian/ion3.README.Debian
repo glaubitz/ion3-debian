@@ -1,0 +1,94 @@
+Ion3
+====
+
+Ion3 is now considered stable, but there have been substantial changes
+from earlier development snapshots.
+
+Instructions for using Ion3 can be found in the manual page ("man
+ion3").  Additional documentation is included in the ion3-doc package:
+"Configuring and extending Ion3 with Lua" and "Ion: Notes for the
+module and patch writer".  There is an FAQ online at
+<http://modeemi.fi/~tuomov/ion/faq.html>.
+
+Some scripts extending Ion3 are available in the ion3-scripts package,
+though this is not currently maintained.
+
+There is an unofficial module adding Xinerama support in the
+mod-xinerama-for-ion package.
+
+Docks and system trays
+----------------------
+
+Ion3 is compatible with the docking protocols used by WindowMaker and
+KDE.  It can place docked applications windows either in a corner
+dock, or in a "system tray" in the status bar.
+
+For a corner dock, add:
+
+    dopath("mod_dock")
+
+to cfg_ion.lua or cfg_modules.lua and edit cfg_dock.lua to your
+preferences.  The dock window's visibility can be toggled using
+MOD1+D.
+
+For a system tray, edit cfg_statusbar.lua to include:
+
+    mod_statusbar.create {
+       ...
+       systray=true,
+       template="... %systray"
+    }
+
+You can also configure specific windows to appear in the status bar:
+
+    -- In cfg_ion.lua:
+    defwinprop {
+       class = "foo-window-class",
+       statusbar = "foo"
+    }
+
+    -- In cfg_status_bar.lua:
+    mod_statusbar.create {
+       ...
+       template="... %systray_foo"
+    }
+
+GNOME unfortunately uses a different dock protocol. However, the
+docker program can adapt from this to the WindowMaker protocol. So you
+can include a GNOME system tray in your status bar by including docker
+in your X session and this in your Ion3 configuration:
+
+    -- In cfg_ion.lua:
+    defwinprop {
+       class = "Docker",
+       statusbar = "dock"
+    }
+
+    -- In cfg_statusbar.lua:
+    mod_statusbar.create {
+       ...
+       template="... %systray_dock"
+    }
+
+Adding configuration files to the defaults
+------------------------------------------
+
+Ion3 extension packages may add and remove configuration files to
+those included by cfg_defaults.lua.  The configuration files must be
+installed under /etc/X11/ion3.  Run "install-ion3-cfg cfg_foo" in the
+postinst script to add the configuration file
+/etc/X11/ion3/cfg_foo.lua.  Run "install-ion3-cfg --remove cfg_foo" in
+the prerm script to remove it.
+
+Compatibility with Flash full-screen mode
+-----------------------------------------
+
+The official Flash plugin (flashplugin-nonfree) can open full-screen
+windows.  Version 9 has a bug in this feature which causes these windows
+to close immediately if they are managed by Ion3.  This package includes
+a workaround, but it is ugly and is not enabled by default.  If you
+need it, add this to cfg_ion.lua:
+
+    dopath("cfg_kludge_flash")
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 07 Feb 2008 20:35:27 +0000

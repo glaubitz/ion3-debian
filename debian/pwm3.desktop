@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PWM3
+Comment=PWM window manager (version 3)
+Comment[cs]=Správce oken PWM (verze 3)
+Exec=/usr/bin/pwm3
+Type=Application

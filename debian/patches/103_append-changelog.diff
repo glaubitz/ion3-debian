@@ -1,0 +1,17 @@
+ChangeLog entries from top of ion-3-20090526.diff
+
+--- ion3.orig/ChangeLog
++++ ion3/ChangeLog
+@@ -1,3 +1,12 @@
++2009-03-02 09:30 UTC  Tuomo Valkonen <tuomov@iki.fi>
++  * Don't symlink look.lua, but rather dopath from within
++
++2009-03-02 09:09 UTC  Tuomo Valkonen <tuomov@iki.fi>
++  * Fix frame_clear_shape
++
++2009-02-08 22:37 UTC  Tuomo Valkonen <tuomov@iki.fi>
++  * WM_TAKE_FOCUS tune
++
+ 2009-01-09 22:19 UTC  Tuomo Valkonen <tuomov@iki.fi>
+   tagged ion-3-20090110
+ 

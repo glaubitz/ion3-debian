@@ -1,0 +1,6 @@
+usr/share/ion3/build/system-inc.mk usr/include/ion3/build/system-inc.mk
+usr/share/ion3/build/rules.mk usr/include/ion3/build/rules.mk
+usr/lib/ion3/config.h usr/include/ion3/config.h
+usr/lib/ion3/system.mk usr/include/ion3/system.mk
+usr/lib/ion3/build/libs.mk usr/include/ion3/build/libs.mk
+usr/lib/ion3/libextl/libextl-mkexports usr/include/ion3/libextl/libextl-mkexports

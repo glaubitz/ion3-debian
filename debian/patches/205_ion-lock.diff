@@ -1,0 +1,32 @@
+--- ion3.orig/etc/cfg_ioncore.lua
++++ ion3/etc/cfg_ioncore.lua
+@@ -330,7 +330,8 @@
+ defmenu("mainmenu", {
+     menuentry("Run...",         "mod_query.query_exec(_)"),
+     menuentry("Terminal",       "ioncore.exec_on(_, XTERM or 'xterm')"),
+-    menuentry("Lock screen",    "ioncore.exec_on(_, 'xlock')"),
++    menuentry("Lock screen",
++              "ioncore.exec_on(_, ioncore.lookup_script('ion-lock'))"),
+     menuentry("Help",           "mod_query.query_man(_)"),
+     menuentry("About Ion",      "mod_query.show_about_ion(_)"),
+     submenu("Styles",           "stylemenu"),
+--- ion3.orig/utils/Makefile
++++ ion3/utils/Makefile
+@@ -11,7 +11,7 @@
+ SUBDIRS=ion-completefile ion-statusd
+ INSTALL_SUBDIRS=$(SUBDIRS)
+ 
+-SHELLSCRIPTS = ion-runinxterm ion-completeman
++SHELLSCRIPTS = ion-runinxterm ion-completeman ion-lock
+ 
+ TARGETS = ion-completeman
+ 
+--- /dev/null
++++ ion3/utils/ion-lock
+@@ -0,0 +1,6 @@
++#!/bin/sh
++if xscreensaver-command -version >/dev/null 2>&1; then
++	exec xscreensaver-command -lock
++else
++	exec xlock
++fi

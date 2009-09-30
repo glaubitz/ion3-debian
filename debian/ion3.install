@@ -1,0 +1,5 @@
+debian/ion3.desktop debian/pwm3.desktop usr/share/xsessions
+debian/default etc
+debian/watch usr/share/ion3/debian
+debian/install-ion3-cfg usr/sbin
+debian/cfg_kludge_flash.lua etc/X11/ion3

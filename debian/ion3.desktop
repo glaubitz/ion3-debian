@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Ion3
+Comment=Ion window manager (version 3)
+Comment[cs]=Správce oken Ion (verze 3)
+Exec=/usr/bin/ion3
+Type=Application

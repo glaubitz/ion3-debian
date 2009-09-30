@@ -1,0 +1,4 @@
+?package(ion3):needs="wm" section="Window Managers" \
+  title="Ion3" command="/usr/bin/ion3"
+?package(ion3):needs="wm" section="Window Managers" \
+  title="PWM3" command="/usr/bin/pwm3"
